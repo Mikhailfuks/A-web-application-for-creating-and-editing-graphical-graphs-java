@@ -1,0 +1,25 @@
+@RestController
+public class ChartController {
+
+    @Autowired
+    private ChartService chartService;
+
+    @PostMapping("/charts")
+    public Chart createChart(@RequestBody ChartRequest request) {
+        return chartService.createChart(request);
+    }
+
+    @GetMapping("/charts/{id}")
+    public Chart getChart(@PathVariable Long id) {
+        return chartService.getChart(id);
+    }
+}
+
+@Service
+public class ChartService {
+
+
+
+    public Chart createChart(ChartRequest request) {
+   }
+}
